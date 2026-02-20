@@ -1,0 +1,237 @@
+/* =============================================
+   RESUME PAGE STYLES
+============================================= */
+
+.resume-page {
+  padding: 80px 0 60px;
+}
+
+.resume-page__header {
+  padding: 60px 0 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.resume-page__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.resume-page__subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.resume-page__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Resume Layout ── */
+.resume-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* ── Resume Block ── */
+.resume-block {
+  margin-bottom: 36px;
+}
+
+.resume-block__title {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.resume-block__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Skills ── */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-row__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.skill-row__track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-row__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── Timeline Entries ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-entry {
+  padding: 0 0 28px 28px;
+  position: relative;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg-primary);
+  z-index: 1;
+}
+
+.timeline-entry:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-entry__date {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.timeline-entry__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.timeline-entry__org {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.timeline-entry__desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ── Courses / Certs ── */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 10px 12px;
+  border: 1.5px solid var(--border-mid);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-box);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.cert-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+.cert-item::before {
+  content: '▸';
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── PDF Viewer ── */
+.resume-pdf-section {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.resume-pdf-section__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.resume-pdf-embed {
+  width: 100%;
+  height: 700px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.resume-pdf-placeholder {
+  width: 100%;
+  height: 200px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+.resume-pdf-placeholder span {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .resume-layout {
+    grid-template-columns: 1fr;
+  }
+}
