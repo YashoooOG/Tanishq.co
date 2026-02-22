@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 
 const PHRASES = [
   'Building Scalable Systems',
-  'Designing Clean Architectures',
+//   'Designing Clean Architectures',
+  'Hard Stuck Gold in Valorant',
   'Solving Complex Problems',
-  'Writing Elegant Backend Code',
+  `const life = 'Hello, World!'`,
 ];
 
 export default function TypingEffect() {

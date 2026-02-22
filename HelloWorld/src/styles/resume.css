@@ -48,7 +48,7 @@
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-green);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@
 
 .skill-row__fill {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, #ef4444, #facc15, #22c55e);
   border-radius: 2px;
 }
 
@@ -125,7 +125,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--accent-blue);
   background: var(--bg-primary);
   z-index: 1;
 }
@@ -137,7 +137,7 @@
 .timeline-entry__date {
   font-size: 0.68rem;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--accent-blue);
   margin-bottom: 4px;
 }
 
@@ -180,12 +180,12 @@
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .cert-item:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-accent);
+  border-color: var(--accent-yellow);
+  box-shadow: 3px 3px 0 rgba(250,204,21,0.4);
 }
 .cert-item::before {
   content: '▸';
-  color: var(--accent);
+  color: var(--accent-yellow);
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -201,7 +201,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-blue);
   margin-bottom: 16px;
 }
 

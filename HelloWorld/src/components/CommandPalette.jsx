@@ -6,7 +6,6 @@ import '../styles/command-palette.css';
 const COMMANDS = [
   { id: 'home',     label: 'Go to Home',         icon: '~',  action: 'nav',    target: '/' },
   { id: 'resume',   label: 'View Resume',         icon: '📄', action: 'nav',    target: '/resume' },
-  { id: 'blog',     label: 'Read Blog',           icon: '✏',  action: 'nav',    target: '/blog' },
   { id: 'about',    label: 'Scroll to About',     icon: '01', action: 'scroll', target: '#about' },
   { id: 'stack',    label: 'Scroll to Stack',     icon: '02', action: 'scroll', target: '#stack' },
   { id: 'projects', label: 'Scroll to Projects',  icon: '03', action: 'scroll', target: '#projects' },

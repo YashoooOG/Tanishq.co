@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/navbar.css';
 
 const NAV_LINKS = [
   { label: 'Portfolio', to: '/' },
   { label: 'Resume', to: '/resume' },
-  { label: 'Blog', to: '/blog' },
 ];
 
 export default function Navbar({ onOpenPalette }) {
@@ -15,8 +13,6 @@ export default function Navbar({ onOpenPalette }) {
   const [logoGlitch, setLogoGlitch] = useState(false);
   const logoClicks = useRef(0);
   const logoTimer = useRef(null);
-  const { theme, toggle } = useTheme();
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -65,14 +61,6 @@ export default function Navbar({ onOpenPalette }) {
               </li>
             ))}
           </ul>
-
-          <button
-            className="navbar__theme-toggle"
-            onClick={toggle}
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? '☀' : '◑'}
-          </button>
 
           <button
             className="navbar__palette-btn"

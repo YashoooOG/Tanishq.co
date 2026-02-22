@@ -5,8 +5,6 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
 import CommandPalette from './components/CommandPalette';
 import KonamiOverlay from './components/KonamiOverlay';
 import { useKonami } from './hooks/useKonami';
@@ -40,11 +38,11 @@ function AppInner() {
   useEffect(() => {
     console.log(
       CONSOLE_ART,
-      'color: #c47f17; font-family: monospace; font-size: 10px;'
+      'color: #ef4444; font-family: monospace; font-size: 10px;'
     );
     console.log(
       '%c Hey, curious one. 👀',
-      'color: #c47f17; font-weight: bold; font-size: 14px;'
+      'color: #3b82f6; font-weight: bold; font-size: 14px;'
     );
     console.log(
       '%c You found the source. Try the Konami code on the page for another secret.',
@@ -94,8 +92,6 @@ function AppInner() {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <CommandPalette isOpen={paletteOpen} onClose={() => setPaletteOpen(false)} />
       {konamiActive && <KonamiOverlay onClose={() => setKonamiActive(false)} />}

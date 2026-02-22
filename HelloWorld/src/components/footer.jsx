@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
         <div className="footer__right">
           <a
-            href="https://github.com"
+            href="https://github.com/YashoooOG"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
@@ -38,14 +38,14 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/yashoooog/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
           >
             LinkedIn
           </a>
-          <a href="mailto:tanishq@example.com" className="footer__link">
+          <a href="mailto:tanishq20verma05@gmail.com" className="footer__link">
             Email
           </a>
         </div>

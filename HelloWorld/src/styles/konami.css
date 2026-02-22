@@ -21,7 +21,7 @@
   position: relative;
   padding: 48px 40px;
   border: 1px solid var(--accent);
-  box-shadow: 6px 6px 0 var(--accent), 0 0 40px rgba(196, 127, 23, 0.15);
+  box-shadow: 6px 6px 0 var(--accent-blue), 0 0 40px rgba(239, 68, 68, 0.2);
   animation: konami-glitch 0.4s steps(2) 0.1s 2;
   max-width: 900px;
   width: 90%;

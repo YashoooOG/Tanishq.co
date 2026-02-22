@@ -1,62 +1,32 @@
 export const projects = [
   {
     id: 'PRJ_001',
-    title: 'Travel India',
+    title: 'RentX',
     description:
-      'A full-stack travel discovery platform for exploring destinations across India. Features destination search, trip planning, user authentication, and dynamic content management.',
-    tech: ['React', 'Node.js', 'MySQL', 'Express', 'REST API'],
-    liveLink: '#',
-    codeLink: '#',
-    status: 'live',
+    'A full-stack rental hub application built with React, Node.js, and Express. Implements RESTful APIs for property listing and management, with server-side data handling using the Node.js file system (fs module).',
+    tech: ['React', 'Node.js', 'Express', 'REST API', 'JWT'],
+    liveLink: null,
+    codeLink: 'https://github.com/YashoooOG/RentX',
+    status: 'github',
   },
   {
     id: 'PRJ_002',
-    title: 'API Builder Toolkit',
+    title: 'Xenora',
     description:
-      'A backend utility for scaffolding production-grade REST APIs. Generates boilerplate with authentication, validation, error handling, and database integrations.',
-    tech: ['Java', 'Spring Boot', 'MySQL', 'JWT', 'Maven'],
+      'A MERN stack Lost & Found web application enabling users to report lost items, post found items, and connect securely. Includes JWT authentication, CRUD operations, image handling, and optimized MongoDB schema design.',
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
     liveLink: null,
-    codeLink: '#',
-    status: 'live',
-  },
-  {
-    id: 'PRJ_003',
-    title: 'DSA Tracker',
-    description:
-      'A personal data structures and algorithms progress tracker. Organizes problems by topic, difficulty, and completion status with local persistence.',
-    tech: ['React', 'JavaScript', 'CSS', 'LocalStorage'],
-    liveLink: '#',
-    codeLink: '#',
-    status: 'live',
-  },
-  {
-    id: 'PRJ_004',
-    title: 'Linux CLI Toolkit',
-    description:
-      'A collection of Bash scripts that automate common Linux system administration tasks — log rotation, backup management, process monitoring, and system health checks.',
-    tech: ['Bash', 'Linux', 'Shell Scripting', 'Cron'],
-    liveLink: null,
-    codeLink: '#',
-    status: 'live',
-  },
-  {
-    id: 'PRJ_005',
-    title: 'Chat Server',
-    description:
-      'A multi-threaded TCP chat server built in Java supporting real-time messaging between multiple clients. Implements socket programming with thread pooling.',
-    tech: ['Java', 'Sockets', 'Multithreading', 'TCP/IP'],
-    liveLink: null,
-    codeLink: '#',
+    codeLink: 'https://github.com/YashoooOG/Xenora',
     status: 'wip',
   },
   {
-    id: 'PRJ_006',
-    title: 'Portfolio OS',
+    id: 'PRJ_003',
+    title: 'Resume.py',
     description:
-      'This portfolio — designed to feel like a developer terminal with clean architecture, modular React components, React Router, and zero UI library dependencies.',
-    tech: ['React', 'Vite', 'CSS', 'React Router'],
-    liveLink: '#',
+      'A Python-based resume critique engine that analyzes resume structure, keyword relevance, and content quality using text processing techniques. Generates actionable feedback to improve ATS compatibility and professional impact.',
+    tech: ['Python', 'Flask', 'NLP', 'Text Processing'],
+    liveLink: null,
     codeLink: '#',
-    status: 'live',
+    status: 'github',
   },
 ];

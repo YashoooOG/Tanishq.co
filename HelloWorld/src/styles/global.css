@@ -1,41 +1,32 @@
 /* =============================================
    GLOBAL STYLES — TANISHQ.CO
-   Retro Boxy · Amber Hint · Dark + Light
+   Retro Boxy · Neon Multi-Color · Dark Only
 ============================================= */
 
-/* ── Dark theme (default) ── */
+/* ── Dark theme (only) ── */
 :root {
   --bg-primary:    #0d0d0d;
   --bg-secondary:  #111111;
   --bg-card:       #161616;
   --text-primary:  #e8e4dc;
   --text-secondary:#787060;
-  --accent:        #c47f17;
-  --accent-dim:    rgba(196, 127, 23, 0.08);
+
+  /* ── Multi-color accent palette ── */
+  --accent:        #ef4444;              /* red   — primary/default */
+  --accent-blue:   #3b82f6;             /* blue */
+  --accent-green:  #22c55e;             /* green */
+  --accent-yellow: #facc15;             /* yellow */
+
+  --accent-dim:    rgba(239, 68, 68, 0.08);
   --border:        #252525;
   --border-mid:    #333333;
   --shadow-box:    3px 3px 0 #252525;
-  --shadow-accent: 3px 3px 0 rgba(196, 127, 23, 0.5);
+  --shadow-accent: 3px 3px 0 rgba(239, 68, 68, 0.4);
   --font-mono:     'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace;
   --transition:    0.18s ease;
   --radius:        0px;
   --max-width:     1100px;
   --section-gap:   100px;
-}
-
-/* ── Light theme ── */
-[data-theme="light"] {
-  --bg-primary:    #f2ede4;
-  --bg-secondary:  #e8e2d8;
-  --bg-card:       #f9f5ee;
-  --text-primary:  #12100a;
-  --text-secondary:#5c5040;
-  --accent:        #a86910;
-  --accent-dim:    rgba(168, 105, 16, 0.09);
-  --border:        #c8c2b6;
-  --border-mid:    #aaa49a;
-  --shadow-box:    3px 3px 0 #c8c2b6;
-  --shadow-accent: 3px 3px 0 rgba(168, 105, 16, 0.5);
 }
 
 *,
@@ -109,7 +100,7 @@ img {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-blue);
   margin-bottom: 8px;
 }
 
@@ -127,7 +118,7 @@ img {
   display: block;
   width: 48px;
   height: 2px;
-  background: var(--accent);
+  background: var(--accent-yellow);
   margin-top: 10px;
 }
 
@@ -162,7 +153,7 @@ img {
 .btn-primary:hover {
   border-color: var(--accent);
   color: var(--accent);
-  box-shadow: var(--shadow-accent);
+  box-shadow: 3px 3px 0 rgba(239,68,68,0.4);
 }
 
 .btn-secondary {
@@ -171,9 +162,9 @@ img {
   box-shadow: var(--shadow-box);
 }
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  box-shadow: var(--shadow-accent);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  box-shadow: 3px 3px 0 rgba(59,130,246,0.4);
 }
 
 .btn-ghost {
@@ -184,8 +175,8 @@ img {
   padding: 7px 14px;
 }
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
 }
 
 /* ── Fade-in animation ── */
