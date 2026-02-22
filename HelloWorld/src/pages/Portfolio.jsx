@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaDiscord, FaInstagram, FaEnvelope } from "react-
 import SectionWrapper from '../components/SectionWrapper';
 import TypingEffect from '../components/TypingEffect';
 import ProjectCard from '../components/ProjectCard';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 import { projects } from '../data/projects';
 import '../styles/portfolio.css';
 import '../styles/components.css';
