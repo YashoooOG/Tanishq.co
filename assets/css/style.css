@@ -162,7 +162,14 @@ html {
 }
 
 body {
-  background: var(--smoky-black);
+  background-color: var(--smoky-black);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 219, 112, 0.05) 0%, transparent 65%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 30px 30px, 30px 30px;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 
@@ -195,7 +202,7 @@ article {
   background: var(--border-gradient-onyx);
   width: 30px;
   height: 30px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,16 +231,18 @@ article {
 
 article.active {
   display: block;
-  animation: fade 0.5s ease backwards;
+  animation: smoothTabFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fade {
+@keyframes smoothTabFade {
   0% {
     opacity: 0;
+    transform: translateY(8px);
   }
 
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -358,6 +367,56 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+}
+
+.status-badge-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--orange-yellow-crayola);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.status-badge-box:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.9);
+  animation: pulseYellowDot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulseYellowDot {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 1);
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
 }
 
 .avatar-box {
@@ -577,9 +636,15 @@ main {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 20px;
-  border-radius: 14px;
+  border-radius: 18px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
 }
 
 .service-item::before {
@@ -1164,13 +1229,19 @@ main {
 .project-item {
   display: none;
   background: var(--border-gradient-onyx);
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid var(--jet);
   padding: 20px;
   box-shadow: var(--shadow-2);
   position: relative;
   z-index: 1;
-  transition: all var(--transition-1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
+  border-color: rgba(255, 219, 112, 0.3);
 }
 
 .project-item::before {
@@ -1185,15 +1256,17 @@ main {
 
 .project-item.active {
   display: block;
-  animation: scaleUp 0.25s ease forwards;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes scaleUp {
   0% {
-    transform: scale(0.5);
+    opacity: 0;
+    transform: scale(0.97);
   }
 
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -1324,16 +1397,17 @@ main {
 .project-details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-2), opacity var(--transition-1), margin-top var(--transition-1);
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-top 0.3s ease, padding-top 0.3s ease;
   opacity: 0;
   margin-top: 0;
+  padding-top: 0;
 }
 
 .project-item.expanded .project-details {
   max-height: 800px;
   opacity: 1;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 18px;
+  padding-top: 18px;
   border-top: 1px solid var(--jet);
 }
 
@@ -1374,16 +1448,17 @@ main {
   color: var(--orange-yellow-crayola);
   font-size: var(--fs-7);
   font-weight: var(--fw-400);
-  padding: 6px 12px;
+  padding: 5px 12px;
   border-radius: 8px;
   border: 1px solid var(--jet);
-  transition: var(--transition-1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
 .tech-tag:hover {
   border-color: var(--orange-yellow-crayola);
   background: var(--jet);
+  transform: translateY(-1px);
 }
 
 
@@ -2334,10 +2409,12 @@ textarea.form-input::-webkit-resizer {
 
   .sidebar-info {
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
-  .avatar-box img {
-    width: 150px;
+  .status-badge-box {
+    margin-bottom: 6px;
   }
 
   .info-content .name {
@@ -2396,26 +2473,57 @@ textarea.form-input::-webkit-resizer {
 
 
 /* ==========================================================================
-   BOXY REDESIGN OVERRIDES (Change all rounded corners to sharp corners)
+   CLEAN & ROUNDED AESTHETIC REFINEMENTS
    ========================================================================== */
 
 .sidebar,
-article,
+article {
+  border-radius: 24px;
+}
+
+.avatar-box {
+  border-radius: 20px;
+}
+
+.avatar-box img {
+  border-radius: 16px;
+}
+
+.service-item,
 .project-item,
+.content-card,
+.resume-preview-container {
+  border-radius: 18px;
+}
+
 .skills-grid-card,
+.skills-toggle-btn,
 .form-input,
 .form-btn,
-.navbar,
-.icon-box,
-.avatar-box,
-.info_more-btn,
-.tech-tag,
-.mapbox,
-.resume-preview-container,
-.skills-toggle-btn,
+.project-link-btn,
+.project-toggle-btn,
 .filter-select,
 .select-list,
-.select-item button,
-.avatar-box img {
-  border-radius: 0px !important;
+.select-item button {
+  border-radius: 12px;
+}
+
+.tech-tag {
+  border-radius: 8px;
+}
+
+.project-status {
+  border-radius: 9999px;
+}
+
+.icon-box {
+  border-radius: 12px;
+}
+
+.social-item .social-link {
+  border-radius: 10px;
+}
+
+.mapbox {
+  border-radius: 18px;
 }

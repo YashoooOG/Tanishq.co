@@ -41,12 +41,13 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+        <div class="status-badge-box" title="Open to Opportunities">
+          <span class="status-dot"></span>
+          <span class="status-text">Unemployed</span>
+        </div>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Tanishq Verma</h1>
+          <h1 class="name" title="Tanishq Verma">Tanishq Verma</h1>
 
           <p class="title">Backend developer / Gen AI</p>
         </div>
@@ -375,48 +376,6 @@
 
 
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Chitkara University</h4>
-
-              <span>2024 — 2028</span>
-
-              <p class="timeline-text">
-                Bachelor of Engineering, Computer Science & Engineering; CGPA: 9.34
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">OPS Intermediate College</h4>
-
-              <span>2020 — 2023</span>
-
-              <p class="timeline-text">
-                State Board(U.P.)
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -562,6 +521,46 @@
 
         </section>
 
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Chitkara University</h4>
+
+              <span>2024 — 2028</span>
+
+              <p class="timeline-text">
+                Bachelor of Engineering, Computer Science & Engineering; CGPA: 9.34
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">OPS Intermediate College</h4>
+
+              <span>2020 — 2023</span>
+
+              <p class="timeline-text">
+                State Board(U.P.)
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
       </article>
 
 
@@ -671,7 +670,54 @@
               </div>
             </li>
 
-            <!-- 3. Document RAG AI -->
+            <!-- 3. Dynamic Fare Engine -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <div class="project-header">
+                <div class="project-header-left">
+                  <div class="project-title-row">
+                    <h3 class="project-title">Dynamic Fare Engine</h3>
+                  </div>
+                  <div class="project-meta-row">
+                    <span>Machine Learning</span>
+                  </div>
+                </div>
+                <div class="project-header-right">
+                  <span class="project-status ongoing">Ongoing</span>
+                  <a href="https://github.com/YashoooOG/dynamic-fare-engine" target="_blank" class="project-link-btn"
+                    title="View GitHub Repository">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="project-toggle-btn" aria-label="Toggle Details">
+                    <ion-icon name="chevron-down-outline" class="project-toggle-icon"></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="project-details">
+                <p class="project-description">
+                  ML-driven dynamic surge pricing engine for ride-hailing and food delivery platforms to balance
+                  real-time supply and demand.
+                </p>
+                <ul class="project-highlights">
+                  <li>Engineered end-to-end data pipelines for feature extraction (lag features, time features, zone
+                    encoding) and multi-source dataset ingestion.</li>
+                  <li>Developed machine learning models for real-time demand forecasting and cancellation risk
+                    prediction using Scikit-Learn and XGBoost.</li>
+                  <li>Built dynamic pricing optimization algorithms and an interactive Streamlit simulation dashboard
+                    with real-time analytics.</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tech-tag">python</span>
+                  <span class="tech-tag">machine-learning</span>
+                  <span class="tech-tag">xgboost</span>
+                  <span class="tech-tag">scikit-learn</span>
+                  <span class="tech-tag">pandas</span>
+                  <span class="tech-tag">streamlit</span>
+                  <span class="tech-tag">data-pipelines</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 4. Document RAG AI -->
             <li class="project-item active" data-filter-item data-category="artificial intelligence">
               <div class="project-header">
                 <div class="project-header-left">
@@ -716,7 +762,7 @@
               </div>
             </li>
 
-            <!-- 4. ML Student Performance -->
+            <!-- 5. ML Student Performance -->
             <li class="project-item active" data-filter-item data-category="machine learning">
               <div class="project-header">
                 <div class="project-header-left">
@@ -760,7 +806,7 @@
               </div>
             </li>
 
-            <!-- 5. Xenora -->
+            <!-- 6. Xenora -->
             <li class="project-item active" data-filter-item data-category="full stack application">
               <div class="project-header">
                 <div class="project-header-left">
