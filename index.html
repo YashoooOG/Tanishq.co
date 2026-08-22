@@ -41,10 +41,10 @@
 
       <div class="sidebar-info">
 
-        <div class="status-badge-box" title="Open to Opportunities">
+        <!-- <div class="status-badge-box" title="Open to Opportunities">
           <span class="status-dot"></span>
           <span class="status-text">Unemployed</span>
-        </div>
+        </div> -->
 
         <div class="info-content">
           <h1 class="name" title="Tanishq Verma">Tanishq Verma</h1>
@@ -330,15 +330,14 @@
               <h3 class="h3">Resume Preview</h3>
             </div>
 
-            <a href="#" target="_blank" class="form-btn download-cv-btn">
+            <a href="https://drive.google.com/uc?export=download&id=1cuFc-ewJzO2qOvgHxX1BbVEZuL8_xRgc" target="_blank" class="form-btn download-cv-btn">
               <ion-icon name="download-outline"></ion-icon>
               <span>Download CV</span>
             </a>
           </div>
 
           <div class="resume-preview-container content-card">
-            <!-- Replace 'YOUR_DRIVE_FILE_ID' with the actual file ID from Google Drive preview link -->
-            <iframe src="https://drive.google.com/file/d/YOUR_DRIVE_FILE_ID/preview" class="resume-iframe"
+            <iframe src="https://drive.google.com/file/d/1cuFc-ewJzO2qOvgHxX1BbVEZuL8_xRgc/preview" class="resume-iframe"
               loading="lazy">
             </iframe>
           </div>
@@ -383,10 +382,13 @@
           <!-- Skills categories navigation tabs -->
           <ul class="skills-toggle-list has-scrollbar">
             <li class="skills-toggle-item">
-              <button class="skills-toggle-btn active" data-skills-btn="lang-concept">Language & Concept</button>
+              <button class="skills-toggle-btn active" data-skills-btn="lang-concept">Languages & Concepts</button>
             </li>
             <li class="skills-toggle-item">
-              <button class="skills-toggle-btn" data-skills-btn="backend-db">Backend & Databases</button>
+              <button class="skills-toggle-btn" data-skills-btn="backend">Frameworks & Backend</button>
+            </li>
+            <li class="skills-toggle-item">
+              <button class="skills-toggle-btn" data-skills-btn="databases">Databases & Data Layer</button>
             </li>
             <li class="skills-toggle-item">
               <button class="skills-toggle-btn" data-skills-btn="devops-cloud">DevOps & Cloud</button>
@@ -395,13 +397,16 @@
               <button class="skills-toggle-btn" data-skills-btn="ai-ml">AI/ML</button>
             </li>
             <li class="skills-toggle-item">
-              <button class="skills-toggle-btn" data-skills-btn="tools">System Design & Tools</button>
+              <button class="skills-toggle-btn" data-skills-btn="developer-tools">Developer Tools</button>
+            </li>
+            <li class="skills-toggle-item">
+              <button class="skills-toggle-btn" data-skills-btn="core-cs">Core CS</button>
             </li>
           </ul>
 
           <div class="skills-container">
 
-            <!-- 1. Language & Concept -->
+            <!-- 1. Languages & Concepts -->
             <ul class="skills-list-grid content-card active" data-skills-content="lang-concept">
               <li class="skills-grid-card">
                 <span class="skill-name">Java</span>
@@ -410,29 +415,32 @@
                 <span class="skill-name">Python</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">OOP</span>
+                <span class="skill-name">JavaScript</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">CN</span>
+                <span class="skill-name">HTML</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">OS</span>
+                <span class="skill-name">CSS</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">DBMS</span>
-              </li>
-              <li class="skills-grid-card">
-                <span class="skill-name">Agile Methodology</span>
+                <span class="skill-name">SQL</span>
               </li>
             </ul>
 
-            <!-- 2. Backend & Databases -->
-            <ul class="skills-list-grid content-card" data-skills-content="backend-db">
+            <!-- 2. Frameworks & Backend -->
+            <ul class="skills-list-grid content-card" data-skills-content="backend">
               <li class="skills-grid-card">
                 <span class="skill-name">Node.js</span>
               </li>
               <li class="skills-grid-card">
                 <span class="skill-name">Express.js</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Spring Boot</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">FastAPI</span>
               </li>
               <li class="skills-grid-card">
                 <span class="skill-name">REST APIs</span>
@@ -441,11 +449,15 @@
                 <span class="skill-name">WebSockets</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">FastAPI</span>
+                <span class="skill-name">Redis</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">Spring Boot</span>
+                <span class="skill-name">Apache Kafka</span>
               </li>
+            </ul>
+
+            <!-- 3. Databases & Data Layer -->
+            <ul class="skills-list-grid content-card" data-skills-content="databases">
               <li class="skills-grid-card">
                 <span class="skill-name">MySQL</span>
               </li>
@@ -461,9 +473,12 @@
               <li class="skills-grid-card">
                 <span class="skill-name">Supabase</span>
               </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Prisma</span>
+              </li>
             </ul>
 
-            <!-- 3. DevOps and Cloud -->
+            <!-- 4. DevOps & Cloud -->
             <ul class="skills-list-grid content-card" data-skills-content="devops-cloud">
               <li class="skills-grid-card">
                 <span class="skill-name">Docker</span>
@@ -472,14 +487,29 @@
                 <span class="skill-name">Kubernetes</span>
               </li>
               <li class="skills-grid-card">
+                <span class="skill-name">AWS EC2</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">AWS S3</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">AWS IAM</span>
+              </li>
+              <li class="skills-grid-card">
                 <span class="skill-name">GitHub Actions</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">MLOps</span>
+                <span class="skill-name">Vercel</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Render</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Railway</span>
               </li>
             </ul>
 
-            <!-- 4. AI/ML -->
+            <!-- 5. AI/ML -->
             <ul class="skills-list-grid content-card" data-skills-content="ai-ml">
               <li class="skills-grid-card">
                 <span class="skill-name">NumPy</span>
@@ -491,18 +521,27 @@
                 <span class="skill-name">Matplotlib</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">OpenCV</span>
-              </li>
-              <li class="skills-grid-card">
                 <span class="skill-name">Scikit-learn</span>
               </li>
               <li class="skills-grid-card">
                 <span class="skill-name">PyTorch</span>
               </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Prompt Engineering</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">LangChain</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">LangGraph</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">LLM APIs</span>
+              </li>
             </ul>
 
-            <!-- 5. System Design and Tools -->
-            <ul class="skills-list-grid content-card" data-skills-content="tools">
+            <!-- 6. Developer Tools -->
+            <ul class="skills-list-grid content-card" data-skills-content="developer-tools">
               <li class="skills-grid-card">
                 <span class="skill-name">Git</span>
               </li>
@@ -510,10 +549,35 @@
                 <span class="skill-name">GitHub</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">Postman</span>
+                <span class="skill-name">Linux (CachyOS/Arch)</span>
               </li>
               <li class="skills-grid-card">
-                <span class="skill-name">Visual Studio Code</span>
+                <span class="skill-name">VS Code</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Postman</span>
+              </li>
+            </ul>
+
+            <!-- 7. Core CS -->
+            <ul class="skills-list-grid content-card" data-skills-content="core-cs">
+              <li class="skills-grid-card">
+                <span class="skill-name">Data Structures & Algorithms</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">DBMS</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Operating Systems</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Computer Networks</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">OOP</span>
+              </li>
+              <li class="skills-grid-card">
+                <span class="skill-name">Agile Methodology</span>
               </li>
             </ul>
 
@@ -848,6 +912,95 @@
                   <span class="tech-tag">solid-principles</span>
                   <span class="tech-tag">mongodb</span>
                   <span class="tech-tag">react</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 7. Zenvo SaaS Website Builder -->
+            <li class="project-item active" data-filter-item data-category="full stack application">
+              <div class="project-header">
+                <div class="project-header-left">
+                  <div class="project-title-row">
+                    <h3 class="project-title">Zenvo SaaS Website Builder</h3>
+                  </div>
+                  <div class="project-meta-row">
+                    <span>Full Stack Application</span>
+                  </div>
+                </div>
+                <div class="project-header-right">
+                  <span class="project-status ongoing">Ongoing</span>
+                  <a href="https://github.com/YashoooOG/Zenvo-saas-website-builder" target="_blank"
+                    class="project-link-btn" title="View GitHub Repository">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="project-toggle-btn" aria-label="Toggle Details">
+                    <ion-icon name="chevron-down-outline" class="project-toggle-icon"></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="project-details">
+                <p class="project-description">
+                  Production-ready SaaS platform featuring a drag-and-drop website and funnel builder, Kanban project
+                  management, Stripe Connect payments, multi-tenancy, and authentication.
+                </p>
+                <ul class="project-highlights">
+                  <li>Built an interactive drag-and-drop website and funnel builder with real-time visual editing and responsive canvas previews.</li>
+                  <li>Architected a multi-tenant agency ecosystem featuring Kanban project boards, sub-account management, and role-based permissions.</li>
+                  <li>Integrated Stripe Connect for recurring subscription billing, customized checkouts, and automated platform fee distribution.</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tech-tag">nextjs</span>
+                  <span class="tech-tag">react</span>
+                  <span class="tech-tag">typescript</span>
+                  <span class="tech-tag">tailwind-css</span>
+                  <span class="tech-tag">stripe-connect</span>
+                  <span class="tech-tag">multi-tenancy</span>
+                  <span class="tech-tag">prisma</span>
+                  <span class="tech-tag">saas</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 8. PyTorch Breast Cancer Classification -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <div class="project-header">
+                <div class="project-header-left">
+                  <div class="project-title-row">
+                    <h3 class="project-title">PyTorch Breast Cancer Classification</h3>
+                  </div>
+                  <div class="project-meta-row">
+                    <span>Machine Learning</span>
+                  </div>
+                </div>
+                <div class="project-header-right">
+                  <span class="project-status completed">Completed</span>
+                  <a href="https://github.com/YashoooOG/learning-pytorch-breast-cancer" target="_blank"
+                    class="project-link-btn" title="View GitHub Repository">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="project-toggle-btn" aria-label="Toggle Details">
+                    <ion-icon name="chevron-down-outline" class="project-toggle-icon"></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="project-details">
+                <p class="project-description">
+                  Deep learning binary classification model built with PyTorch to detect and classify breast cancer
+                  tumors as Malignant or Benign using clinical diagnostic cell features.
+                </p>
+                <ul class="project-highlights">
+                  <li>Built and trained custom feedforward neural network architectures from scratch using PyTorch tensors and autograd.</li>
+                  <li>Engineered data preprocessing and feature scaling pipelines on clinical biopsy measurements using Pandas and Scikit-Learn.</li>
+                  <li>Implemented full training loops with binary cross-entropy loss, Adam optimization, and backpropagation for parameter updates.</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tech-tag">pytorch</span>
+                  <span class="tech-tag">python</span>
+                  <span class="tech-tag">deep-learning</span>
+                  <span class="tech-tag">neural-networks</span>
+                  <span class="tech-tag">scikit-learn</span>
+                  <span class="tech-tag">pandas</span>
+                  <span class="tech-tag">jupyter-notebook</span>
                 </div>
               </div>
             </li>
